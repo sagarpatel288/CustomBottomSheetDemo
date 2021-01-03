@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/v_parent_coor"
+    android:background="?selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/v_btn_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="Normal"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/v_custom_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/v_mbtn_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="collapse" />
+
+        <View
+            android:id="@+id/v_view_space"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/black" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple_200"
+        android:clickable="false"
+        android:focusable="false"
+        android:padding="0dp"
+        app:layout_anchor="@id/v_custom_bottom_sheet"
+        app:layout_anchorGravity="bottom|end">
+
+        <FrameLayout
+            android:id="@+id/v_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/v_tv_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="CUSTOM"
+                android:textColor="@color/white"
+                android:textIsSelectable="false"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

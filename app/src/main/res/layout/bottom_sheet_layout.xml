@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/v_custom_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="50dp"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingBottom="50dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/v_mbtn_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="collapse" />
+
+    <View
+        android:id="@+id/v_view_space"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/black" />
+
+</LinearLayout>
